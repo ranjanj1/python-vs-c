@@ -1,0 +1,157 @@
+{
+ "status": "FROZEN v10, 6 Nov 2026; v3 to v10 are updates during the runs; v9 and v10 follow sitting 1, disclosed",
+ "machine": {
+  "chip": "Apple M1",
+  "memory_bytes": 8589934592,
+  "macos": "26.5.2",
+  "arch": "arm64"
+ },
+ "agent": {
+  "tool": "Claude Code 2.1.318",
+  "model": "claude-opus-5-5",
+  "effort": "high",
+  "auth": "subscription, direct",
+  "auto_update": "off",
+  "plugins": "none; LSP offers declined",
+  "web_tools": "denied"
+ },
+ "sessions": {
+  "ids": [
+   "C1",
+   "P1",
+   "P4",
+   "P3",
+   "CB",
+   "MJ",
+   "CB2"
+  ],
+  "steps": [
+   "initial",
+   "optimize_1",
+   "optimize_2"
+  ],
+  "minutes_per_step": 30,
+  "token_or_spend_cap": "$10 per step, estimated at API list prices ($4 in, $20 out, $0.20 cache read, $8 cache write per million); polled every 15 s, so a step can overshoot slightly",
+  "structure": "one continuing Claude Code session per ID, three steps, snapshot and hashes after each",
+  "failed_step_policy": "stays failed; usage-limit interruption recorded as interrupted, no quiet rerun",
+  "sandbox": "sandbox/session.sb.template plus hostname filter allowing api.anthropic.com only",
+  "order_note": "MJ runs last, so a usage limit on the bonus lane cannot cost a main-film version"
+ },
+ "reference": {
+  "repo": "https://github.com/karpathy/llama2.c",
+  "commit": "350e04fe35433e6d2941dce5a1f53308f87058eb",
+  "build": "clang -O3 -arch arm64, no fast-math"
+ },
+ "inputs_sha256": {
+  "models/stories110M.bin": "515267168726a1ed1317a64a408492e6af3b67c1f71c5bd98c01d9d721803a24",
+  "sources/upstream/tokenizer.bin": "50a52ef822ee9e83de5ce9d0be0a025a773d019437f58b5ff9dcafb063ece361"
+ },
+ "toolchain": {
+  "clang": "Apple clang version 21.0.0 (clang-2100.0.123.102)",
+  "cpython": "3.12.13",
+  "numpy": "2.5.4 (Accelerate)",
+  "numba": "0.68.1",
+  "pypy": "7.3.21 (Python 3.11.15)",
+  "kits": "/Users/Shared/pvc-kit: stdlib, numpy, numba, mojo; no pip, no network",
+  "mojo": "1.2.0 (2016d0cd), PyPI wheel; repo tag mojo/v1.2.0 commit 527d069ee11a41ac5320af1f9402db0a66b2b868; mojo build default -O3"
+ },
+ "numerics": {
+  "tolerance_max_abs_logit": 0.0005,
+  "pilot_basis": "worst known-correct error vs float64 was 4.2e-5",
+  "status": "frozen",
+  "checks": "token ids, all 32,000 decoded tokens, logits on eval prompts plus one 256-position sequence, FIXED agrees with LOGITS, argmax at clear positions; a story change at a near-tie is reported as diverged, not failed"
+ },
+ "measurement": {
+  "blocks_min": 10,
+  "blocks_if_close": 20,
+  "threads": 1,
+  "warmup_policy": "first-use request plus 1 warm-up in the same process, all implementations; PyPy pilot stable from first request",
+  "cooldown_policy": "30 s between samples and a 15-minute rest before sitting 1, at Ranjan's request; official run stops on a thermal warning",
+  "timeouts": "1,800 s per request, same for all; a timeout is reported, never extrapolated",
+  "single_thread_evidence": "CPU seconds divided by wall seconds recorded for each sample; NumPy control measured 0.94 to 0.99",
+  "power": "official run refuses to start off mains",
+  "official_prompt": "first EVAL prompt; other EVAL prompts are for correctness",
+  "sittings": 2,
+  "pilot_data_policy": "pilot files never enter results"
+ },
+ "workload": {
+  "model": "stories110M.bin only",
+  "new_tokens": 64,
+  "long_numeric_check_positions": 256,
+  "reason": "Ranjan chose one model on 5 Nov, before any official run; stories15M is a gate-test fixture only"
+ },
+ "implementations": {
+  "C0": "reference",
+  "C1": "AI",
+  "P1": "AI",
+  "P4": "AI",
+  "P3": "AI",
+  "CB": "AI, Apple Accelerate as NumPy uses",
+  "P2": "P1 final file on PyPy, labelled PyPy with an AI-tuned path; the file selects a PyPy-only kernel",
+  "MJ": "AI, bonus lane, Mojo is not Python; nearest comparison is C1 (tuned loops, no math library)",
+  "P2raw": "side test, not on the main scoreboard: same file with that kernel switched off by one labelled human edit; engine change only",
+  "CB2": "AI, added 6 Nov after sitting 1: CB rule said same operation shapes, P3 had no such limit, and P3 re-blocked its weights. CB2 has P3's freedom; matrix work must go through Accelerate. CB stays on record. The session was not told what P3 did."
+ },
+ "mojo_lane": {
+  "docs": "/Users/Shared/pvc-kit/mojo/docs: pinned stdlib source and manual, because Mojo 1.2.0 is newer than the model training cutoff and sessions have no web; other kits already hold their library source",
+  "cache": "sandbox/mojo-wrapper.sh is installed as the kit mojo command and points its cache to /tmp; sandbox unchanged",
+  "audit": "before timing, read MJ source for Python interop, parallelize, external math calls and fast-math flags; otool -L must show no Accelerate or BLAS; CPU/wall recorded as for all",
+  "telemetry": "MODULAR_TELEMETRY_ENABLED=false in the wrapper; telemetry.modular.com also denied by the network filter"
+ },
+ "changes": [
+  {
+   "version": 3,
+   "what": "recorder now answers the \"Do you want to overwrite\" permission prompt; v1 and v2 left it unanswered",
+   "effect": "C1 optimize_1 ended while writing NOTES.md after its code work was done; C1 optimize_2 ended after 65 s with no code change. Both logs kept. Harness fault, not an AI failure."
+  },
+  {
+   "version": 4,
+   "what": "recorder treats a waiting background shell as busy, not idle; runner archives and clears agentlab files in /tmp before each new version",
+   "effect": "P1 initial ended while its background check.py ran; code was complete and P1 optimize_1 reran the check and passed. Session logs show P1 used only its own /tmp folders, so no cross-version reading occurred."
+  },
+  {
+   "version": 5,
+   "what": "validator timeout set to the protocol limit of 1,800 s; it was 600 s by default",
+   "effect": "found before any hidden-prompt check ran; no result affected"
+  },
+  {
+   "version": 6,
+   "what": "P1 final snapshot is repair_1, from the plan repair prompt in the remaining step budget (Ranjan, option A)",
+   "effect": "loader and NUL piece fixed; the AI also added a matmul kernel selected only on PyPy, beyond the two reported errors. CPython keeps its zip kernel. P2 is the same file but no longer an engine swap alone; must be labelled."
+  },
+  {
+   "version": 7,
+   "what": "adds P2raw side test (Ranjan, option A)",
+   "effect": "main scoreboard unchanged"
+  },
+  {
+   "version": 8,
+   "what": "pause between samples raised from 5 s to 30 s, before any official sample",
+   "effect": "same for every version"
+  },
+  {
+   "version": 9,
+   "what": "adds CB2 (Ranjan, option A) after seeing sitting 1",
+   "effect": "a rule was added after results were seen; must be disclosed in the film"
+  },
+  {
+   "version": 10,
+   "what": "CB2 final snapshot is repair_1; repair prompt removed multi-position batching that broke rule 1, after the CB2 row wording \"group the library calls\" allowed that reading",
+   "effect": "CB2 optimize_2 is void; one token per forward pass in all commands"
+  }
+ ],
+ "final_snapshots": {
+  "C1": "optimize_2_redo2",
+  "P1": "repair_1",
+  "P4": "optimize_2",
+  "P3": "optimize_2",
+  "CB": "optimize_2",
+  "MJ": "optimize_2",
+  "CB2": "repair_1"
+ },
+ "c1_steps_note": "optimize_2 void (recorder fault); optimize_2_redo finished notes only, no code change; optimize_2_redo2 was the real third round, chosen by Ranjan in advance as the final attempt",
+ "side_tests": {
+  "P2raw": "3 blocks, once, separate run; ports/p2raw"
+ },
+ "sittings_note": "sitting 2 adds CB2; sitting 3 on another day times C0, C1, CB, CB2 and P3 so CB2 has two days"
+}

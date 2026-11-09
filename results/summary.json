@@ -1,0 +1,247 @@
+{
+ "sittings": [
+  "sitting-1",
+  "sitting-2",
+  "sitting-3"
+ ],
+ "versions": {
+  "MJ": {
+   "runs": 20,
+   "sittings": [
+    "sitting-1",
+    "sitting-2"
+   ],
+   "tok_s": 139.655,
+   "min": 136.436,
+   "max": 140.049,
+   "request_s": 0.51,
+   "rss_mb": 550,
+   "first_use_s": 0.19
+  },
+  "P1": {
+   "runs": 20,
+   "sittings": [
+    "sitting-1",
+    "sitting-2"
+   ],
+   "tok_s": 0.439,
+   "min": 0.438,
+   "max": 0.439,
+   "request_s": 163.86,
+   "rss_mb": 580,
+   "first_use_s": 20.13
+  },
+  "CB": {
+   "runs": 30,
+   "sittings": [
+    "sitting-1",
+    "sitting-2",
+    "sitting-3"
+   ],
+   "tok_s": 77.287,
+   "min": 69.524,
+   "max": 77.575,
+   "request_s": 0.93,
+   "rss_mb": 451,
+   "first_use_s": 0.2
+  },
+  "P3": {
+   "runs": 30,
+   "sittings": [
+    "sitting-1",
+    "sitting-2",
+    "sitting-3"
+   ],
+   "tok_s": 121.034,
+   "min": 117.799,
+   "max": 121.757,
+   "request_s": 0.59,
+   "rss_mb": 530,
+   "first_use_s": 0.28
+  },
+  "P2": {
+   "runs": 20,
+   "sittings": [
+    "sitting-1",
+    "sitting-2"
+   ],
+   "tok_s": 2.417,
+   "min": 2.411,
+   "max": 2.455,
+   "request_s": 29.77,
+   "rss_mb": 620,
+   "first_use_s": 3.85
+  },
+  "C1": {
+   "runs": 30,
+   "sittings": [
+    "sitting-1",
+    "sitting-2",
+    "sitting-3"
+   ],
+   "tok_s": 138.384,
+   "min": 128.346,
+   "max": 138.794,
+   "request_s": 0.52,
+   "rss_mb": 452,
+   "first_use_s": 0.15
+  },
+  "P4": {
+   "runs": 20,
+   "sittings": [
+    "sitting-1",
+    "sitting-2"
+   ],
+   "tok_s": 133.671,
+   "min": 132.586,
+   "max": 134.145,
+   "request_s": 0.54,
+   "rss_mb": 987,
+   "first_use_s": 0.66
+  },
+  "C0": {
+   "runs": 30,
+   "sittings": [
+    "sitting-1",
+    "sitting-2",
+    "sitting-3"
+   ],
+   "tok_s": 11.409,
+   "min": 11.398,
+   "max": 11.411,
+   "request_s": 6.31,
+   "rss_mb": 517,
+   "first_use_s": 0.84
+  },
+  "CB2": {
+   "runs": 20,
+   "sittings": [
+    "sitting-2",
+    "sitting-3"
+   ],
+   "tok_s": 136.683,
+   "min": 134.075,
+   "max": 136.933,
+   "request_s": 0.52,
+   "rss_mb": 882,
+   "first_use_s": 0.17
+  },
+  "P2raw": {
+   "runs": 3,
+   "sittings": [
+    "side-p2raw"
+   ],
+   "tok_s": 0.196,
+   "min": 0.196,
+   "max": 0.196,
+   "request_s": 367.46,
+   "rss_mb": 602,
+   "first_use_s": 45.72
+  }
+ },
+ "pairs": {
+  "MJ/C1": {
+   "median": 1.0092,
+   "min": 1.0025,
+   "max": 1.0904,
+   "a_ahead": 20,
+   "rounds": 20
+  },
+  "P4/C1": {
+   "median": 0.9668,
+   "min": 0.96,
+   "max": 1.0452,
+   "a_ahead": 4,
+   "rounds": 20
+  },
+  "P3/C1": {
+   "median": 0.8753,
+   "min": 0.8511,
+   "max": 0.9449,
+   "a_ahead": 0,
+   "rounds": 30
+  },
+  "CB2/C1": {
+   "median": 0.9871,
+   "min": 0.968,
+   "max": 1.0305,
+   "a_ahead": 2,
+   "rounds": 20
+  },
+  "CB2/P3": {
+   "median": 1.1272,
+   "min": 1.1128,
+   "max": 1.1329,
+   "a_ahead": 20,
+   "rounds": 20
+  },
+  "P3/CB": {
+   "median": 1.5662,
+   "min": 1.5234,
+   "max": 1.748,
+   "a_ahead": 30,
+   "rounds": 30
+  },
+  "P4/P3": {
+   "median": 1.1044,
+   "min": 1.0894,
+   "max": 1.1354,
+   "a_ahead": 20,
+   "rounds": 20
+  },
+  "C1/C0": {
+   "median": 12.1316,
+   "min": 11.2496,
+   "max": 12.1648,
+   "a_ahead": 30,
+   "rounds": 30
+  },
+  "P3/C0": {
+   "median": 10.6108,
+   "min": 10.3234,
+   "max": 10.6721,
+   "a_ahead": 30,
+   "rounds": 30
+  },
+  "C0/P1": {
+   "median": 25.9843,
+   "min": 25.9571,
+   "max": 26.0291,
+   "a_ahead": 20,
+   "rounds": 20
+  },
+  "C1/P1": {
+   "median": 315.1594,
+   "min": 292.6971,
+   "max": 315.7767,
+   "a_ahead": 20,
+   "rounds": 20
+  },
+  "P3/P1": {
+   "median": 275.6945,
+   "min": 268.3804,
+   "max": 277.2963,
+   "a_ahead": 20,
+   "rounds": 20
+  },
+  "P2/P1": {
+   "median": 5.5115,
+   "min": 5.4929,
+   "max": 5.5946,
+   "a_ahead": 20,
+   "rounds": 20
+  }
+ },
+ "model_mb": 438,
+ "gb_s_at_c1": 60.6,
+ "estimated_usd": {
+  "p4": 6.69,
+  "p3": 5.01,
+  "c1": 7.04,
+  "p1": 4.19,
+  "cb2": 7.48,
+  "mj": 7.86,
+  "cb": 2.8
+ },
+ "estimated_usd_total": 41.07
+}

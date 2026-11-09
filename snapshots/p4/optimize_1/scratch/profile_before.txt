@@ -1,0 +1,37 @@
+positions 82 x 3; per-call dispatch overhead 0.1 us (included below)
+phase           ms/token  share  GB/s (weights)
+classifier         3.041  30.1%    32.3
+matmul w1          1.468  14.5%    51.4
+matmul w3          1.455  14.4%    51.9
+matmul w2          1.385  13.7%    54.5
+matmul v           0.532   5.3%    53.2
+matmul q           0.530   5.3%    53.4
+matmul k           0.530   5.2%    53.5
+matmul o           0.529   5.2%    53.5
+attention          0.443   4.4%  
+rope               0.065   0.6%  
+swiglu             0.064   0.6%  
+rmsnorm            0.040   0.4%  
+residual           0.015   0.1%  
+sum (phased)      10.097
+compiled forward(): median 10.003 ms/token, min 9.778
+weights streamed per token 438 MB -> effective 44.8 GB/s at min
+metric                              median       min       max
+startup                              1.703     1.356     1.712
+encode x9                            0.002     0.001     0.004
+gen0 total                           0.712     0.672     0.891
+gen0 first-token                     0.057     0.053     0.076
+gen0 tok/s                          89.833    71.838    95.259
+logits0 (69 pos) total               0.737     0.682     1.446
+logits0 pos/s                       93.608    47.709   101.111
+gen1 total                           0.793     0.774     1.154
+gen1 first-token                     0.149     0.143     0.333
+gen1 tok/s                          80.664    55.457    82.698
+logits1 (79 pos) total               1.005     0.790     1.173
+logits1 pos/s                       78.580    67.361    99.966
+gen2 total                           0.941     0.815     1.685
+gen2 first-token                     0.227     0.176     0.471
+gen2 tok/s                          67.984    37.985    78.546
+logits2 (82 pos) total               0.969     0.860     1.055
+logits2 pos/s                       84.662    77.752    95.383
+whole session                        7.541     6.395     8.296

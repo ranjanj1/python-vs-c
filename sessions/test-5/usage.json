@@ -1,0 +1,31 @@
+{
+ "totalCostUSD": 0.09359970000000001,
+ "totalDuration": 27625,
+ "totalAPIDuration": 13795,
+ "totalLinesAdded": 11,
+ "totalLinesRemoved": 0,
+ "modelUsage": {
+  "claude-haiku-5-5": {
+   "inputTokens": 1200,
+   "outputTokens": 23,
+   "thinkingTokens": 0,
+   "cacheReadInputTokens": 0,
+   "cacheCreationInputTokens": 0,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 0,
+   "webSearchRequests": 0,
+   "costUSD": 0.0001315
+  },
+  "claude-opus-5-5": {
+   "inputTokens": 512,
+   "outputTokens": 383,
+   "thinkingTokens": 24,
+   "cacheReadInputTokens": 124881,
+   "cacheCreationInputTokens": 7348,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 7348,
+   "webSearchRequests": 0,
+   "costUSD": 0.0934682
+  }
+ }
+}

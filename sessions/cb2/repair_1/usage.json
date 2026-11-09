@@ -1,0 +1,11 @@
+{
+ "estimated_usd_api_prices": 1.1242,
+ "api_calls": 14,
+ "models": [
+  "claude-opus-5-5"
+ ],
+ "input_tokens": 30,
+ "output_tokens": 14007,
+ "cache_read_input_tokens": 3145481,
+ "cache_creation_input_tokens": 26857
+}

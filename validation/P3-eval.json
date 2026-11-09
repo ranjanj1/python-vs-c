@@ -1,0 +1,43 @@
+{
+ "name": "P3",
+ "numeric": "passed",
+ "exact_generation": "matched",
+ "eligible": true,
+ "models": [
+  {
+   "model": "110M",
+   "errors": [],
+   "prompts": [
+    {
+     "prompt_tokens": 9,
+     "new": 64,
+     "stop": "max",
+     "max_err": 5.53131103515625e-05,
+     "exact": true
+    },
+    {
+     "prompt_tokens": 7,
+     "new": 64,
+     "stop": "max",
+     "max_err": 3.814697265625e-05,
+     "exact": true
+    },
+    {
+     "prompt_tokens": 25,
+     "new": 64,
+     "stop": "max",
+     "max_err": 3.0517578125e-05,
+     "exact": true
+    },
+    {
+     "prompt_tokens": 3,
+     "new": 64,
+     "stop": "max",
+     "max_err": 3.147125244140625e-05,
+     "exact": true
+    }
+   ],
+   "max_err": 5.53131103515625e-05
+  }
+ ]
+}

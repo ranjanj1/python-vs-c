@@ -1,0 +1,1 @@
+The implementation failed this check: RULES.md rule 1, batch size 1: forward_chunk processes up to 512 positions in one pass, through cblas_sgemm, for prompts, LOGITS and FIXED. Every position must go through its own complete forward pass, one token at a time, in all commands. Fix it within the same rules and remaining step budget.

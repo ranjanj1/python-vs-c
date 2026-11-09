@@ -1,0 +1,13 @@
+changed since freeze: nothing
+START P3 18:00
+P3 passed matched [[]]
+END P3 18:01 exit 0
+START P4 18:01
+P4 passed matched [[]]
+END P4 18:03 exit 0
+START P2 18:03
+P2 failed diverged [['failed to start: closed early, exit 1, stderr \'Traceback (most recent call last):\\n  File "<repo>/ports/p1/']]
+END P2 18:03 exit 0
+START P1 18:03
+P1 failed matched [['decode differs for 2 tokens, first 3']]
+END P1 18:51 exit 0

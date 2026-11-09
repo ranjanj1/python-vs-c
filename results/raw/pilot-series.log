@@ -1,0 +1,16 @@
+pure-cpython 0 0.4439
+pure-cpython 1 0.4439
+pure-cpython 2 0.4485
+pure-pypy 0 1.9611
+pure-pypy 1 1.9835
+pure-pypy 2 2.002
+pure-pypy 3 1.9897
+pure-pypy 4 1.9941
+pure-pypy 5 1.9951
+pure-pypy 6 1.9879
+pure-pypy 7 1.9909
+pure-pypy 8 1.9756
+pure-pypy 9 1.9906
+pure-pypy 10 1.9745
+pure-pypy 11 1.9893
+sustained first/last [11.352, 11.38, 11.371] [11.38, 11.382, 11.355] min 11.329 max 11.387 n 43

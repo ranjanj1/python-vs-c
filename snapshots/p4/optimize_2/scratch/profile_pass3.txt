@@ -1,0 +1,37 @@
+dev sequence: prompt 3, 82 positions x 4
+phase           ms/token  share  GB/s
+matvec w1|w3       2.798  32.8%    54.0
+classifier         1.809  21.2%    54.3
+matvec qkv         1.583  18.5%    53.7
+matvec w2          1.389  16.3%    54.4
+matvec o           0.527   6.2%    53.7
+attention          0.220   2.6%  
+swiglu             0.065   0.8%  
+kv store           0.061   0.7%  
+rmsnorm            0.041   0.5%  
+rope apply         0.021   0.2%  
+residual           0.017   0.2%  
+rope coef          0.006   0.1%  
+embed              0.004   0.0%  
+sum (phased)       8.540
+compiled forward(): median 8.254 ms/token, min 8.178
+weights streamed per token 438 MB -> effective 53.6 GB/s at min
+metric                              median       min       max
+startup                              0.977     0.968     1.156
+encode x9                            0.000     0.000     0.000
+gen0 total                           0.560     0.554     0.575
+gen0 first-token                     0.041     0.040     0.042
+gen0 tok/s                         114.327   111.364   115.470
+logits0 (69 pos) total               0.579     0.571     0.583
+logits0 pos/s                      119.118   118.383   120.811
+gen1 total                           0.650     0.645     0.652
+gen1 first-token                     0.120     0.119     0.126
+gen1 tok/s                          98.528    98.227    99.184
+logits1 (79 pos) total               0.658     0.655     0.667
+logits1 pos/s                      120.052   118.409   120.566
+gen2 total                           0.675     0.669     0.685
+gen2 first-token                     0.149     0.144     0.152
+gen2 tok/s                          94.805    93.458    95.658
+logits2 (82 pos) total               0.702     0.680     0.714
+logits2 pos/s                      116.888   114.785   120.584
+whole session                        4.871     4.854     5.075

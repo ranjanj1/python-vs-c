@@ -1,0 +1,11 @@
+(version 1)
+(allow default)
+; Home is closed, then only this session's workspace, its own Claude config and the Claude binary are opened (last match wins).
+(deny file-read* file-write* (subpath "/Users/agentlab") (subpath "/Users/Shared") (subpath "/Users/OWNER"))   ; OWNER = the Mac owner's home folder (name removed for publishing)
+(allow file-read-metadata (literal "/Users") (literal "/Users/agentlab") (literal "/Users/agentlab/pvc") (literal "/Users/agentlab/pvcfg"))
+(allow file-read* (subpath "/Users/agentlab/.local") (subpath "/Users/Shared/pvc-kit"))
+(allow file-read* file-write* (subpath "/Users/agentlab/pvc/@SID@") (subpath "/Users/agentlab/pvcfg/@SID@"))
+; Network: nothing leaves except through the local host filter (experiment/tools/net_filter.py).
+(deny network-outbound)
+(allow network-outbound (remote ip "localhost:8899"))
+(allow network-outbound (remote unix-socket))

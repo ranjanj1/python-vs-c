@@ -1,0 +1,1 @@
+Use the Write tool to create notes.md containing the word one. Then use the Write tool again to replace the whole of notes.md with the word two. Then use the Edit tool to change two to three. Then run cat notes.md and stop.

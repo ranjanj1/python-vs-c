@@ -1,0 +1,15 @@
+{
+ "name": "P2",
+ "numeric": "failed",
+ "exact_generation": "diverged",
+ "eligible": false,
+ "models": [
+  {
+   "model": "110M",
+   "errors": [
+    "failed to start: closed early, exit 1, stderr 'Traceback (most recent call last):\\n  File \"<repo>/ports/p1/"
+   ],
+   "prompts": []
+  }
+ ]
+}

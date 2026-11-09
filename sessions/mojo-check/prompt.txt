@@ -1,0 +1,1 @@
+Write hello.mojo that prints the sum of a SIMD float32 vector of 1, 2, 3, 4. Build it with mojo build, run it, and show the output. Then stop.

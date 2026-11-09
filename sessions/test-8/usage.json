@@ -1,0 +1,20 @@
+{
+ "totalCostUSD": 0.057169000000000005,
+ "totalDuration": 23943,
+ "totalAPIDuration": 2984,
+ "totalLinesAdded": 0,
+ "totalLinesRemoved": 0,
+ "modelUsage": {
+  "claude-opus-5-5": {
+   "inputTokens": 4,
+   "outputTokens": 198,
+   "thinkingTokens": 43,
+   "cacheReadInputTokens": 31085,
+   "cacheCreationInputTokens": 5872,
+   "cacheCreationEphemeral5mInputTokens": 0,
+   "cacheCreationEphemeral1hInputTokens": 5872,
+   "webSearchRequests": 0,
+   "costUSD": 0.057169000000000005
+  }
+ }
+}

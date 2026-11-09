@@ -1,0 +1,1 @@
+Write sum.py that prints the sum of the numbers 1 to 100. Run it with python3. Then stop.

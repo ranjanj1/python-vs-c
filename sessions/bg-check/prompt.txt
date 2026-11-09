@@ -1,0 +1,1 @@
+Use the Bash tool with run_in_background set to true to run: sleep 40 && echo finished > done.txt. Do not poll it. End your turn straight away, saying you are waiting for it. When you are notified that it has finished, run cat done.txt and stop.

@@ -1,0 +1,1 @@
+Run `bash probe.sh` in this folder and paste its output exactly. Then stop.

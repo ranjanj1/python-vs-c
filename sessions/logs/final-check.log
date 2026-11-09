@@ -1,0 +1,39 @@
+gate_exit 0
+frozen 7cec4c69bcf5b81a 19 items
+changed since freeze: nothing
+C1 1.14 s: ./build.sh
+CB 0.75 s: clang -O2 -Wall -Wextra -o cb cb.c -framework Accelerate
+MJ 2.62 s: /Users/Shared/pvc-kit/mojo/bin/mojo build mj.mojo -o mj
+START C1 17:55
+C1 passed matched [[]]
+END C1 17:56 exit 0
+START CB 17:56
+CB passed matched [[]]
+END CB 17:58 exit 0
+START MJ 17:58
+MJ passed matched [[]]
+END MJ 18:00 exit 0
+START P3 18:00
+usage: validate.py [-h] --name NAME [--set SET] [--models MODELS]
+                   [--numeric-only]
+                   cmd [cmd ...]
+validate.py: error: unrecognized arguments: -I ports/p3/run.py
+END P3 18:00 exit 0
+START P4 18:00
+usage: validate.py [-h] --name NAME [--set SET] [--models MODELS]
+                   [--numeric-only]
+                   cmd [cmd ...]
+validate.py: error: unrecognized arguments: -I ports/p4/run.py
+END P4 18:00 exit 0
+START P2 18:00
+usage: validate.py [-h] --name NAME [--set SET] [--models MODELS]
+                   [--numeric-only]
+                   cmd [cmd ...]
+validate.py: error: unrecognized arguments: -I ports/p1/run.py
+END P2 18:00 exit 0
+START P1 18:00
+usage: validate.py [-h] --name NAME [--set SET] [--models MODELS]
+                   [--numeric-only]
+                   cmd [cmd ...]
+validate.py: error: unrecognized arguments: -I ports/p1/run.py
+END P1 18:00 exit 0

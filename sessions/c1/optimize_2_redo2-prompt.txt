@@ -1,0 +1,1 @@
+Profile this implementation on the supplied development workloads. Improve performance within the same rules and remaining budget. Preserve the interface and correctness requirements. Do not use hidden evaluation inputs, external implementations or other ports. Record profiling evidence, changes, tests and remaining limitations in NOTES.md.

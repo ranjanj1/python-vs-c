@@ -1,0 +1,45 @@
+{
+ "name": "P1",
+ "numeric": "failed",
+ "exact_generation": "matched",
+ "eligible": false,
+ "models": [
+  {
+   "model": "110M",
+   "errors": [
+    "decode differs for 2 tokens, first 3"
+   ],
+   "prompts": [
+    {
+     "prompt_tokens": 9,
+     "new": 64,
+     "stop": "max",
+     "max_err": 5.054473876953125e-05,
+     "exact": true
+    },
+    {
+     "prompt_tokens": 7,
+     "new": 64,
+     "stop": "max",
+     "max_err": 3.62396240234375e-05,
+     "exact": true
+    },
+    {
+     "prompt_tokens": 25,
+     "new": 64,
+     "stop": "max",
+     "max_err": 3.24249267578125e-05,
+     "exact": true
+    },
+    {
+     "prompt_tokens": 3,
+     "new": 64,
+     "stop": "max",
+     "max_err": 3.0517578125e-05,
+     "exact": true
+    }
+   ],
+   "max_err": 5.054473876953125e-05
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+Write sum.c that prints the sum of the numbers 1 to 100. Compile it with clang and run it. Then stop.

@@ -1,0 +1,6 @@
+19:19:03 allow CONNECT api.anthropic.com:443
+19:19:03 allow CONNECT api.anthropic.com:443
+19:19:03 deny  CONNECT downloads.claude.ai:443
+19:19:04 deny  CONNECT github.com:443
+19:19:07 allow CONNECT api.anthropic.com:443
+19:26:15 allow CONNECT api.anthropic.com:443
